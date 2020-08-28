@@ -1,0 +1,27 @@
+<!-- img logo -->
+<span class="d-flex justify-content-center mt-5">
+    <a [routerLink]="['/']" class="text-center"><img src="assets/img/LOGO-H3-300X300PX.png" alt="" width="66%"></a>
+</span>
+<!-- h1 -->
+<a href="cerrar.php" class="text-decoration-none mt-5 p-5"><span class="return_home">Cerrar sesion</span></a>
+<h1 class="text-center text-bebas-neve mt-2">Administrador</h1>
+
+<div class="size_content container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-4 d-flex justify-content-center text-center contenedor p-3">
+            <button type="button" class="btn btn-secondary btn-lg btn-block btn_principal"
+                onclick="window.location='admin/usuarios'">
+                <span><i class="fas fa-user-plus p-3" style="font-size: 6rem;"></i></span>
+                <span>Registro Usuarios</span>
+            </button>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex justify-content-center text-center contenedor p-3">
+            <button type="button" class="btn btn-secondary btn-lg btn-block btn_principal"
+                onclick="window.location='admin/facturas'">
+                <span><i class="fas fa-address-card p-3" style="font-size: 6rem;"></i></span>
+                <span>Registro Facturas</span>
+            </button>
+        </div>
+    </div>
+</div>

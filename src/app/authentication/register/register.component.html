@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <h1 class="p-3">Registrarse</h1>
+            <img src="assets/img/LOGO-H3-300X300PX.png" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form [formGroup]="RegisterForm" (ngSubmit)="onRegister()">
+            <input type="text" class="fadeIn second" formControlName="username" placeholder="usuario" required>
+            <input type="text" class="fadeIn second" formControlName="role" placeholder="rol" required>
+            <input type="password" class="fadeIn third" formControlName="password" placeholder="contraseña" required>
+            <input type="submit" class="fadeIn fourth" value="Registrar" >
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" [routerLink]="['/auth']">Iniciar sesión</a>
+        </div>
+
+    </div>
+</div>

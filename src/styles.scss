@@ -1,1 +1,329 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(assets/img/TEXTURA-FINAL-1920x1048px-24022020.png);
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 537px;
+    text-align: center;
+}
+
+.scrollmenu{
+    overflow: auto;
+    white-space: nowrap;
+    min-height: 530px;
+}
+.table{
+    background-color: #041e3e;
+    color: #fff;
+}
+.table2{
+    background-color: #fff;
+    color: #000;
+}
+.table2:hover{
+    background-color: rgb(235, 230, 230);
+    color: #000;
+}
+
+.btn_principal{
+    width: 17rem;
+    height: 22rem;
+    border-radius: 2rem;
+    background: #1072ba;
+    font-size: 2.5rem;
+    font-weight: 700
+}
+
+.btn_principal:hover{
+    background: #1073bac9;
+}
+
+.alert{
+    color: red;
+}
+
+/* style text */
+.text-bebas-neve{
+    font-family: 'Bebas Neue', sans-serif !important;
+}
+
+.text-color-gray{
+    color: #a7a9ac !important;
+}
+
+.text-color-blue-light{
+    color: #1072ba !important;
+}
+
+/* index */
+
+.mt_container{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.mas_menos{
+    cursor: pointer;
+}
+
+/* header */
+header{
+    position: absolute;
+}
+header div.row{
+    width: 3%;
+}
+
+header nav{
+    width: 5%;
+    position: relative;
+}
+
+/* content */
+.return_home{
+    font-family: helvetica;
+    font-weight: lighter;
+    border-bottom: solid 1px #007bff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.size_content{
+    min-height: calc(71vh - 10px - 30px);
+}
+
+.btn_consult{
+    font-family: helvetica;
+    border: solid 1px #000;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn_consult:hover{
+    background-color: #1072ba;
+    color: #fff;
+}
+
+/* footer */
+.footer_principal{
+    width: 100%;
+    background: #1072ba;
+    color: #fff;
+    height: 3rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.footer_secundario{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    height: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* contactanos */
+.contactanos{
+    position: fixed;
+    right: 2rem;
+    top: 17rem;
+    z-index: 10
+}
+
+/* whatsapp */
+.whatsapp{
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    z-index: 10
+}
+
+
+/*inicio menu*/
+
+input#abrir-cerrar {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+.cerrar {
+    display: none;
+}
+
+#sidebar {
+    width: 0;
+}
+
+#contenido {
+    margin-left: 0;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .cerrar {
+    display: block;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .abrir {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 5rem;
+    z-index: 1;
+    background-color: #e7e8e8;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.sidebar .boton-cerrar {
+    position: relative;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+}
+
+.sidebar ul, .sidebar li {
+    padding: 0;
+    list-style: none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width: 200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#contenido {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar {
+    color: #2E88C7;
+    font-size: 1rem;
+}
+
+input#abrir-cerrar {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"], input#abrir-cerrar:checked~#contenido {
+    z-index: 200;
+    transition: margin-left .4s;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .cerrar {
+    display: inline;
+}
+
+input#abrir-cerrar:checked+label[for="abrir-cerrar"] .abrir {
+    display: none;
+}
+label[for="abrir-cerrar"] {
+    cursor: pointer;
+}
+input#abrir-cerrar:checked~#sidebar {
+    width: 17%;
+}
+
+.bg_link_menu {
+    color: #000 !important;
+}
+
+.bg_link_menu:hover {
+    background-color: #1072ba !important;
+    color: #fff !important;
+}
+
+.bg_link_menu_none {
+    color: #000 !important;
+}
+
+.bg_link_menu_none:hover {
+    background-color: #e7e8e8 !important;
+    color: #000 !important;
+}
+/*fin menu*/
+
+/* media query */
+@media(min-width: 320px){
+    .mt_container{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    .text_footer{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    header nav{
+        top: -5rem;
+        left: -27px;
+    }
+    input#abrir-cerrar:checked~#sidebar {
+        width: 15rem;
+    }
+}
+
+@media(min-width: 768px){
+    .mt_container{
+        font-size: 3.2rem;
+        margin-top: 6rem;
+    }
+    .text_footer{
+        font-size: 1.25rem;
+        padding: 0;
+    }
+    header nav{
+        top: -20rem;
+        left: -23px;
+    }
+}
+
+@media(min-width: 1200px){
+    input#abrir-cerrar:checked~#sidebar {
+        width: 17%;
+    }
+}

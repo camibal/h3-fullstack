@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-5">
+            <a href="index.php"><img src="assets/img/LOGO-H3-300X300PX.png" width="100vw" alt=""></a>
+        </div>
+    </div>
+    <div class="btn-save d-flex justify-content-end">
+        <app-save-user></app-save-user>
+    </div>
+    <div class="table">
+        <table class="table table-sm bg-light text-dark mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Identificación</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of getUserss">
+                    <th scope="row">{{user.id}}</th>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>
+                        <app-delete-user></app-delete-user>
+                        <app-delete-user [user]="user"></app-delete-user>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

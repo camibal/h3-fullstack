@@ -1,0 +1,18 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+          <h1 class="p-3">Iniciar Sesión</h1>
+          <img src="assets/img/LOGO-H3-300X300PX.png" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+          <input type="text" class="fadeIn second" formControlName="username" placeholder="usuario" required>
+          <input type="password" class="fadeIn third" formControlName="password" placeholder="contraseña" required>
+          <input type="submit" class="fadeIn fourth" value="Iniciar sesión" [disabled]="!LoginForm.valid">
+      </form>
+  </div>
+</div>

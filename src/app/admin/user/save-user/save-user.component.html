@@ -1,0 +1,52 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Agregar Usuario
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="UserForm" (ngSubmit)="onUser()">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Nombre"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Correo"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tid">Tipo de identificación</label>
+                        <select class="form-control" id="tid" formControlName="tid" required>
+                            <option>CC</option>
+                            <option>TI</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="id">Identificación</label>
+                        <input type="number" class="form-control" id="id" formControlName="id"
+                            placeholder="identificación" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
